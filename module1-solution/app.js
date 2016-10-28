@@ -14,7 +14,14 @@ function LunchCheckController($scope){
  $scope.checkLunch = function(){
    var lunchs = $scope.lunchs.split(',');
    var length = $scope.checkLength(lunchs);
-   if (length <= 2) {
+
+   if (length == 0)
+   {
+      $scope.isLunchTooMuch = "Please enter data first!";
+      $scope.color="red";
+   }
+   else if (length > 0 && length <= 2)
+   {
      $scope.isLunchTooMuch = "Enjoy!";
      $scope.color = "green";
    }else {
