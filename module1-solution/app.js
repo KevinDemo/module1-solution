@@ -20,7 +20,7 @@ function LunchCheckController($scope){
       $scope.isLunchTooMuch = "Please enter data first!";
       $scope.color="red";
    }
-   else if (length > 0 && length <= 2)
+   else if (length > 0 && length <= 3)
    {
      $scope.isLunchTooMuch = "Enjoy!";
      $scope.color = "green";
